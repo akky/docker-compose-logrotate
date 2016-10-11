@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+    # simple app to write to log file
+    app:
+      build:
+        context: docker/app/
+      volumes:
+        - /var/www/application/log
+
+    # logrotate and back up to aws
+    s3_backup:
+      build:
+        context: docker/s3_backup/
+      volumes_from:
+        - app

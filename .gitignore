@@ -1,0 +1,5 @@
+cache
+log
+data/feed
+tests/_output/*
+config/aws/credentials.txt
