@@ -4,8 +4,8 @@ TZ=JST
 
 # test every minutes
 * * * * * /bin/sh /logrotate.sh >> /var/log/cron.log 2>&1
-* * * * * /bin/sh /backup-yonda4-log.sh >> /var/log/cron.log 2>&1
+* * * * * /bin/sh /backup-to-s3.sh >> /var/log/cron.log 2>&1
 
 # to rotate 
 #1 0 * * * /bin/sh /logrotate.sh >> /var/log/cron.log 2>&1
-#51 1 * * * /bin/sh /backup-yonda4-log.sh >> /var/log/cron.log 2>&1
+#51 1 * * * /bin/sh /backup-to-s3.sh >> /var/log/cron.log 2>&1
